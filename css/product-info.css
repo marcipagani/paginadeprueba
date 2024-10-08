@@ -325,10 +325,45 @@ body {
 }
 
 body.night-mode {
-  background-color: #121212;
+  background-color: #333;
   color: white;
+  .product-content .product-name,
+  .product-content .product-price p {
+    color: white; 
+  }
+  .rating-star {
+    background: #616161;
+  }
+  
+  .star-icon label {
+    color: black; 
+  }
+  .star-icon label:hover,
+  .star-icon label:hover ~ label {
+     color: rgb(212, 212, 219); 
+  }
+  #myTab .nav-link {
+    color: white;
+  }
+
+#myTab .nav-link.active {
+    font-size: 1.1rem; 
+    border-bottom: 3px solid white; 
+    font-weight: 500;
+    color: #000;
+}
+#myTab .nav-link {
+  color: white;
+  border: 1px solid transparent;
+  transition: border-bottom 0.3s ease, font-size 0.3s ease;
 }
 
-
-
-
+#myTab .nav-link.active {
+  font-size: 1.1rem; 
+  border-bottom: 3px solid white; 
+  font-weight: 500;
+  color: black;
+}
+.comentario {
+  color: black;
+}  

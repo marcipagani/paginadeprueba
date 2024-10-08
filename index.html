@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav id= "nav-1" class="navbar navbar-expand-lg navbar-dark bg-dark p-1" id="nav-principal">
+  <nav id="nav-1" class="navbar navbar-expand-lg navbar-dark bg-dark p-1" id="nav-principal">
     <div class="container">
 
       <a class="navbar-brand" href="#">eMercado</a>
@@ -33,9 +33,18 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-            <span id="username-display" class="navbar-text me-3"></span>
-            <button id="logoutButton" class="btn btn-outline-light">Cerrar sesión</button>
+          <!--drop down para el menu desplegable de usuario-->
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle" href="#" id="usernameDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="username-display">Usuario</span> 
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="usernameDropdown">
+              <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="my-profile.html">Mi Perfil</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button id="logoutButton" class="dropdown-item" type="button">Cerrar sesión</button></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -48,8 +57,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm custom-card cursor-active" id="autos">
-              <img class="bd-placeholder-img card-img-top" src="img/cars_index.jpg"
-                alt="Imgagen representativa de la categoría 'Autos'">
+              <img class="bd-placeholder-img card-img-top" src="img/cars_index.jpg" alt="Imgagen representativa de la categoría 'Autos'">
               <h3 class="m-3">Autos</h3>
               <div class="card-body">
                 <p class="card-text">Los mejores precios en autos 0 kilómetro, de alta y media gama.</p>
@@ -58,8 +66,7 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm custom-card cursor-active" id="juguetes">
-              <img class="bd-placeholder-img card-img-top" src="img/toys_index.jpg"
-                alt="Imgagen representativa de la categoría 'Juguetes'">
+              <img class="bd-placeholder-img card-img-top" src="img/toys_index.jpg" alt="Imgagen representativa de la categoría 'Juguetes'">
               <h3 class="m-3">Juguetes</h3>
               <div class="card-body">
                 <p class="card-text">Encuentra aquí los mejores precios para niños/as de cualquier edad.</p>
@@ -68,8 +75,7 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm custom-card cursor-active" id="muebles">
-              <img class="bd-placeholder-img card-img-top" src="img/furniture_index.jpg"
-                alt="Imgagen representativa de la categoría 'Muebles'">
+              <img class="bd-placeholder-img card-img-top" src="img/furniture_index.jpg" alt="Imgagen representativa de la categoría 'Muebles'">
               <h3 class="m-3">Muebles</h3>
               <div class="card-body">
                 <p class="card-text">Muebles antiguos, nuevos y para ser armados por uno mismo.</p>
