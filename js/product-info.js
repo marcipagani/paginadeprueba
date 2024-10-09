@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function () {
     usernameDisplay.textContent = userName;
 });
 
-// Modo noche
+/* FUNCION MODO NOCHE
 const btnDay = document.getElementById('btn-day');
       const btnNight = document.getElementById('btn-night');
       const body = document.body;
@@ -449,4 +449,33 @@ const btnDay = document.getElementById('btn-day');
   
       btnNight.addEventListener('click', () => {
           body.classList.add('night-mode');
-      });
+      });*/
+
+/*FUNCION MODO NOCHE CON LOCALSTORAGE*/
+const btnDay = document.getElementById('btn-day');
+const btnNight = document.getElementById('btn-night');
+const body = document.body;
+
+// Función para aplicar el modo guardado
+function applySavedMode() {
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode === 'night') {
+        body.classList.add('night-mode');
+    } else {
+        body.classList.remove('night-mode');
+    }
+}
+
+// Llama a la función al cargar la página
+applySavedMode();
+
+btnDay.addEventListener('click', () => {
+    body.classList.remove('night-mode');
+    localStorage.setItem('mode', 'day'); // Guardar la preferencia
+});
+
+btnNight.addEventListener('click', () => {
+    body.classList.add('night-mode');
+    localStorage.setItem('mode', 'night'); // Guardar la preferencia
+});
+
